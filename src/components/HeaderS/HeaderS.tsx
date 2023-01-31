@@ -1,4 +1,11 @@
-import { MainHeader, MainLogo, MainMks, MainSistemas } from "./styled";
+import { ShoppingCart } from "@styled-icons/typicons/ShoppingCart";
+import {
+  ButtonShop,
+  MainHeader,
+  MainLogo,
+  MainMks,
+  MainSistemas,
+} from "./styled";
 
 export function HeaderS() {
   return (
@@ -6,6 +13,11 @@ export function HeaderS() {
       <MainLogo>
         <MainMks>MKS</MainMks>
         <MainSistemas>Sistemas</MainSistemas>
+      </MainLogo>
+      <MainLogo>
+        <ButtonShop>
+          <ShoppingCart width={30} />
+        </ButtonShop>
       </MainLogo>
     </MainHeader>
   );

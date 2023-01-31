@@ -1,3 +1,4 @@
+import { CardTypes } from "../../Types";
 import {
   CardBar,
   CardButton,
@@ -9,24 +10,17 @@ import {
   CardTitle,
 } from "./styled";
 
-interface CardTypes {
-  photo: string;
-  name: string;
-  price: number;
-  desc: string;
-}
-
-export function Card(info: CardTypes) {
+export function Card({ card }: CardTypes) {
   return (
     <>
       <CardContainer>
         <CardInfo>
-          <CardImg src={info.photo} />
+          <CardImg src={card.photo} />
           <CardBar>
-            <CardTitle>{info.name}</CardTitle>
-            <CardPrice>`R${info.price}`</CardPrice>
+            <CardTitle>{card.name}</CardTitle>
+            <CardPrice>R${card.price}</CardPrice>
           </CardBar>
-          <CardDesc>{info.desc}</CardDesc>
+          <CardDesc>Redesigned from scratch and completely revised.</CardDesc>
         </CardInfo>
         <CardButton>Comprar</CardButton>
       </CardContainer>

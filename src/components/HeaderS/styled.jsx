@@ -26,3 +26,13 @@ export const MainSistemas = styled.div`
   color: #ffffff;
   padding-left: 5px;
 `;
+
+export const ButtonShop = styled.div`
+  background-color: #ffffff;
+  border-radius: 8px;
+  width: 100px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;

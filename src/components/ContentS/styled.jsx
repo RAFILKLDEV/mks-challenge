@@ -7,3 +7,13 @@ export const ContentS = styled.div`
   align-items: center;
   justify-content: center;
 `;
+
+export const CardsContent = styled.div`
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 1000px;
+  height: 700px;
+  gap: 20px;
+  grid-template-columns: 220px 220px 220px 220px;
+`;

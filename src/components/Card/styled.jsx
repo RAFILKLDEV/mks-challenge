@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-  height: 300px;
+  height: 270px;
   width: 220px;
-  background-color: aliceblue;
+  background-color: #ffffff;
   border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
 `;
 
 export const CardInfo = styled.div`
-  height: 90%;
-  background-color: aliceblue;
+  background-color: #ffffff;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
   display: flex;
@@ -22,11 +22,14 @@ export const CardInfo = styled.div`
 
 export const CardBar = styled.div`
   display: flex;
-  gap: 5px;
+  align-items: center;
+  width: 100%;
+  height: 57px;
+  justify-content: space-between;
 `;
 
 export const CardTitle = styled.div`
-  font-size: 19px;
+  font-size: 16px;
   font-family: "Montserrat";
 `;
 
@@ -34,12 +37,13 @@ export const CardPrice = styled.div`
   background-color: #373737;
   border-radius: 5px;
   padding: 5px 8px;
+  font-size: 15px;
   color: #ffffff;
+  height: 20px;
 `;
 
 export const CardDesc = styled.div`
   font-size: 10px;
-  font-family: "Montserrat";
 `;
 
 export const CardButton = styled.button`
@@ -57,6 +61,6 @@ export const CardButton = styled.button`
 `;
 
 export const CardImg = styled.img`
-  max-width: 200px;
-  max-height: 200px;
+  width: 190px;
+  height: 170px;
 `;
