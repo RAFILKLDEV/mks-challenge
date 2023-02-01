@@ -4,10 +4,14 @@ import { Content } from "./components/ContentS/Content";
 import { GlobalStyle } from "./globalStyles";
 import { Footer } from "./components/Footer/Footer";
 import { ProductsTypes } from "./Types";
+import { Modal } from "./components/Modal/Modal";
 import axios from "axios";
 
 function App() {
   const [info, setInfo] = useState<ProductsTypes[]>([]);
+  const [modal, setModal] = useState(false);
+
+  console.log(modal);
 
   useEffect(() => {
     async function getApi() {
@@ -23,7 +27,8 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <HeaderS />
+      {modal && <Modal modal={modal} setModal={setModal} />}
+      <HeaderS modal={modal} setModal={setModal} />
       <Content cards={info} />
       <Footer />
     </>

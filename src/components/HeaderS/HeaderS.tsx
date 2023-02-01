@@ -1,4 +1,5 @@
 import { ShoppingCart } from "@styled-icons/typicons/ShoppingCart";
+import { ModalTypes } from "../../Types";
 import {
   ButtonShop,
   MainHeader,
@@ -7,7 +8,7 @@ import {
   MainSistemas,
 } from "./styled";
 
-export function HeaderS() {
+export function HeaderS({ modal, setModal }: ModalTypes) {
   return (
     <MainHeader>
       <MainLogo>
@@ -15,7 +16,7 @@ export function HeaderS() {
         <MainSistemas>Sistemas</MainSistemas>
       </MainLogo>
       <MainLogo>
-        <ButtonShop>
+        <ButtonShop onClick={() => setModal(true)}>
           <ShoppingCart width={30} />
         </ButtonShop>
       </MainLogo>

@@ -16,4 +16,5 @@ export const CardsContent = styled.div`
   height: 700px;
   gap: 20px;
   grid-template-columns: 220px 220px 220px 220px;
+  margin-bottom: 50px;
 `;

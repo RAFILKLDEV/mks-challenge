@@ -13,6 +13,11 @@ export interface CardTypes {
   card: { photo: string; name: string; price: number; description: string };
 }
 
+export interface ModalTypes {
+  setModal: Function;
+  modal: boolean;
+}
+
 // type CardsType = {
 //   // kek: { name: string }[];
 //   kek23: Array<{ name: string }>;
