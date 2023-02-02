@@ -1,3 +1,6 @@
+import { useDispatch } from "react-redux/es/exports";
+import { setProducts } from "../../reducers/CounterSlice";
+import { AppDispatch } from "../../Store";
 import { CardTypes } from "../../Types";
 import {
   CardBar,
@@ -11,6 +14,8 @@ import {
 } from "./styled";
 
 export function Card({ card }: CardTypes) {
+  const dispatch = useDispatch<AppDispatch>();
+
   return (
     <>
       <CardContainer>
@@ -22,7 +27,20 @@ export function Card({ card }: CardTypes) {
           </CardBar>
           <CardDesc>Redesigned from scratch and completely revised.</CardDesc>
         </CardInfo>
-        <CardButton>Comprar</CardButton>
+        <CardButton
+          onClick={() => {
+            dispatch(
+              setProducts({
+                name: card.name,
+                photo: card.photo,
+                price: card.price,
+                amount: 1,
+              })
+            );
+          }}
+        >
+          Comprar
+        </CardButton>
       </CardContainer>
     </>
   );

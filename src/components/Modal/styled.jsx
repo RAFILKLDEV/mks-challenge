@@ -60,6 +60,19 @@ export const ModalButtonXS = styled.button`
   text-align: center;
 `;
 
+export const ModalTotalS = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+`;
+
+export const ModalValuesS = styled.div`
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+`;
+
 // ---------------------- Product --------------------------------
 
 export const ModalProductS = styled.div`
@@ -139,5 +152,3 @@ export const CounterCountS = styled.div`
   border-right: 1px solid #bfbfbf;
   padding: 5px 8px;
 `;
-
-

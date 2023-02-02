@@ -3,15 +3,13 @@ import { HeaderS } from "./components/HeaderS/HeaderS";
 import { Content } from "./components/ContentS/Content";
 import { GlobalStyle } from "./globalStyles";
 import { Footer } from "./components/Footer/Footer";
-import { ProductsTypes } from "./Types";
 import { Modal } from "./components/Modal/Modal";
 import axios from "axios";
 
 function App() {
-  const [info, setInfo] = useState<ProductsTypes[]>([]);
+  const [info, setInfo] = useState([]);
   const [modal, setModal] = useState(false);
-
-  console.log(modal);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function getApi() {
@@ -19,7 +17,7 @@ function App() {
         "https://mks-challenge-api-frontend.herokuapp.com/api/v1/products?page=1&rows=6&sortBy=id&orderBy=DESC"
       );
       setInfo(response.data.products);
-      console.log(response.data.products);
+      setLoading(false);
     }
     getApi();
   }, []);
@@ -29,7 +27,7 @@ function App() {
       <GlobalStyle />
       {modal && <Modal modal={modal} setModal={setModal} />}
       <HeaderS modal={modal} setModal={setModal} />
-      <Content cards={info} />
+      <Content cards={info} loading={loading} />
       <Footer />
     </>
   );

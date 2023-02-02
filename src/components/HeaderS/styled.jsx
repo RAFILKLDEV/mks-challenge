@@ -35,4 +35,10 @@ export const ButtonShop = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 `;
+
+export const ValueS = styled.div`
+  font-size: 20px;
+  font-weight: 700;
+`

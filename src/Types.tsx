@@ -1,21 +1,38 @@
-export interface ProductsTypes {
-  photo: string;
-  name: string;
-  price: number;
-  description: string;
+export interface CardsType {
+  cards: { name: string; photo: string; price: number }[];
+  loading: boolean;
 }
 
-export interface CardsType {
-  cards: { name: string; photo: string; price: number; description: string }[];
+export interface ProductType {
+  card: { name?: string; photo?: string; price: number; amount?: number };
+  id: number;
 }
 
 export interface CardTypes {
-  card: { photo: string; name: string; price: number; description: string };
+  card: { name?: string; photo?: string; price: number; amount?: number };
+  id?: number;
 }
 
 export interface ModalTypes {
   setModal: Function;
   modal: boolean;
+}
+
+export interface StateTypes {
+  products: {
+    name?: string;
+    photo?: string;
+    price: number;
+    amount: number;
+  }[];
+  value: number;
+  total: number[];
+}
+
+export interface CounterTypes {
+  count?: number;
+  setCount?: Function;
+  id: number;
 }
 
 // type CardsType = {
