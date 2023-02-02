@@ -9,6 +9,10 @@ export const ModalS = styled.div`
   box-shadow: -5px 0px 6px rgba(0, 0, 0, 0.13);
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 425px) {
+    width: 90vw;
+  }
 `;
 
 export const ModalContentS = styled.div`
@@ -17,12 +21,21 @@ export const ModalContentS = styled.div`
   display: flex;
   flex-direction: column;
   gap: 30px;
+
+  @media (max-width: 425px) {
+    align-items: center;
+  }
 `;
 
 export const ModalBarS = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 425px) {
+    align-items: center;
+    gap: 50px;
+  }
 `;
 
 export const ModalTitleS = styled.div`
@@ -86,20 +99,49 @@ export const ModalProductS = styled.div`
   box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
   justify-content: space-between;
+
+  @media (max-width: 425px) {
+    width: 200px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px;
+  }
 `;
 
 export const ProductImgS = styled.img`
   height: 100%;
+
+  @media (max-width: 425px) {
+    place-self: center;
+    height: 100px;
+  }
 `;
 
 export const ProductTitleS = styled.div`
   font-size: 13px;
   width: 85px;
+
+  @media (max-width: 425px) {
+    width: 100%;
+    place-self: center;
+    text-align: center;
+  }
 `;
 
 export const ProductValueS = styled.div`
   font-weight: 700;
   font-size: 15px;
+
+  @media (max-width: 425px) {
+    background-color: black;
+    width: auto;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    place-self: center;
+    border-radius: 8%;
+  }
 `;
 
 export const ProductButtonS = styled.div`
@@ -130,6 +172,10 @@ export const CounterS = styled.div`
 
 export const CounterTitleS = styled.div`
   font-size: 10px;
+  @media (max-width: 425px) {
+    place-self: center;
+    font-size: 12px;
+  }
 `;
 
 export const CounterDisplayS = styled.div`
@@ -139,11 +185,19 @@ export const CounterDisplayS = styled.div`
   border-radius: 8px;
   align-items: center;
   height: 5px;
+
+  @media (max-width: 425px) {
+    place-self: center;
+  }
 `;
 
 export const CounterButtonS = styled.button`
   background-color: inherit;
   border: none;
+  @media (max-width: 425px) {
+    place-self: center;
+    font-size: 25px;
+  }
 `;
 
 export const CounterCountS = styled.div`
@@ -151,4 +205,8 @@ export const CounterCountS = styled.div`
   border-left: 1px solid #bfbfbf;
   border-right: 1px solid #bfbfbf;
   padding: 5px 8px;
+
+  @media (max-width: 425px) {
+    font-size: 15px;
+  }
 `;

@@ -12,6 +12,10 @@ export const MainLogo = styled.div`
   display: flex;
   align-items: baseline;
   padding: 25px 65px 25px;
+
+  @media (max-width: 425px) {
+    padding: 0px 25px;
+  }
 `;
 
 export const MainMks = styled.div`
@@ -41,4 +45,4 @@ export const ButtonShop = styled.div`
 export const ValueS = styled.div`
   font-size: 20px;
   font-weight: 700;
-`
+`;

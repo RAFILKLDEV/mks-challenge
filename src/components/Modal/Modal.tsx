@@ -29,13 +29,12 @@ export function Modal({ setModal, modal }: ModalTypes) {
   const products = useSelector((state: RootState) => state.counter.products);
 
   function Product({ card, id }: ProductType) {
-    console.log(card.amount);
     return (
       <ModalProductS>
         <ProductImgS src={card.photo} />
         <ProductTitleS>{card.name}</ProductTitleS>
         <Counter count={card.amount} id={id} />
-        <ProductValueS>{card.price}</ProductValueS>
+        <ProductValueS>R${card.price}</ProductValueS>
         <ProductButtonXS
           onClick={() => {
             dispatch(removeProduct(id));
